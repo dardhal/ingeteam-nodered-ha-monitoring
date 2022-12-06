@@ -3,7 +3,7 @@ Los inversores híbridos INGETEAM SUN STORAGE 1PLAY TL-M no cuentan, a día de h
 
 Para ello se utiliza Node-Red (que en mi caso está instalado como add-on en Home Assistant) y algunos nodos adicionales.
 
-Este repositorio y los flujos que en él se encuentran no son sino una actualización, limpieza, documentación y "puesta en bonito" del excelente trabajo inicial de "mainakae", disponible en el siguiente repositorio de GitHub, del que este respositorio es un fork :
+Este repositorio y los flujos que en él se encuentran no son sino una actualización, limpieza, documentación y "puesta en bonito" del excelente trabajo de "mainakae", disponible en el siguiente repositorio de GitHub, del que este respositorio es un fork :
 
 https://github.com/mainakae/ingeteam
 
@@ -44,7 +44,7 @@ En mi caso además quería tener disponibles en Home Assistant alguno de los val
 
 Copia el contenido del .json en una sola línea, ve al menú superior derecho de Node-Red (las tres rayas horizontales), elige "Import" y pega el contenido en el espacio correspondiente, y confirma la importación como un "nuevo flujo", para tenerlo en una pestaña separada. Es posible que Node-Red te advierta de la necesidad de instalar nodos que aún no tienes instalados, pues algunos no vienen de serie con el add-on de Node-Red para Home Assistant.
 
-* Necesitarás editar los dos nodos "modbus-client", que representan la dirección IP y puerto del acceso a datos MODBUS del inversor (TCP/502) y vatímetro (503)
+* Necesitarás editar los dos nodos "modbus-client", que representan la dirección IP y puerto del acceso a datos MODBUS del inversor (TCP/502) y vatímetro (TCP/503)
 * También podrías necesitar editar los dos nodos "Modbus-Read" si el inversor es una versión anterior (que tiene menos valores expuestos) o el vatímetro es otro modelo diferente. Consulta la documentación del fabricante para más datos
 * Edita también los nodos "influxdb" e "influxdb-out" para inversor y vatímetro, para apuntar a tu instalación de InfluxDB y usar las credenciales y "measurement" de tu elección
 * Una vez hecho el "deploy", activa y desactiva los nodos "Debug" a tu elección para ver el contenido de los objetos
@@ -52,4 +52,10 @@ Copia el contenido del .json en una sola línea, ve al menú superior derecho de
 
 
 ## Otros detalles adicionales
+
+* El inversor no publica valores acumulados de energía (Wh o kWh). El vatímetro externo lo hace pero con una resolución pobre (sólo de décimas de kWh) y obviamente sólo cubre los netos desde y hacia la red eléctrica. En versiones posteriores del firmware del vatímetro (B.10 o posterior) sí proporciona valoes de consumos acumulados con precisión de Wh, pero en mi caso el vatímetro va con la versión B.4, y no los soporta
+* La consulta de los valores MODBUS para inversor y vatímetro está configurada cada 30 segundos. Suficiente para mi, mucho para otros, insuficiente si se quiere una precisión mayor en el cálculo de los consumos
+* Para el vatímetro existen flujos adicionales configurados para ejecutar cada 24 horas porque realmente sólo me fueron útiles a efectos de "troubleshooting"
+* Generar sensores en Home Assistant desde Node-Red se puede hacer de varias otras maneras diferentes, pero a mi usando la API me funcionó y me resultó simple y correcta para mis propópsitos
+
 
