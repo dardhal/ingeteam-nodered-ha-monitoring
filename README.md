@@ -1,15 +1,19 @@
-# ingeteam
-Domotica con el inversor Ingeteam ISS 1Play para instalaciones solares fotovoltaicas
+# INGETEAM Node-Red Home Assistant Monitoring
+Los inversores híbridos INGETEAM SUN STORAGE 1PLAY TL-M no cuentan, a día de hoy (Diciembre 2022) de una integración propiamente dicha en Home Assistant. Para su monitorización y el almacenaje de métricas se hace necesario consultar los valores que el inversor publica via MODBUS (accesibles desde el inversor a través de un puerto TCP), procesarlos, y publicarlos en Home Assistant (si se necesita fácil acceso a ellos) y / o almacenarlos para su utilización, por ejemplo, enviándolos a InfluxDB para su posterior explotación mediante Grafana.
 
-Mirad este video para más información:
+Para ello se utiliza Node-Red (que en mi caso está instalado como add-on en Home Assistant) y algunos nodos adicionales.
 
-[![Video Youtube](https://img.youtube.com/vi/6LML5U0NqVU/0.jpg)](https://www.youtube.com/watch?v=6LML5U0NqVU)
+Este repositorio y los flujos que en él se encuentran no son sino una actualización, limpieza, documentación y "puesta en bonito" del excelente trabajo inicial de "mainakae", disponible en el siguiente repositorio de GitHub, del que este respositorio es un fork :
 
-## Como aplicarlo a vuestro inversor
+https://github.com/mainakae/ingeteam
 
-Previo a todo, necesitareis tener una instalación de Node-Red funcionando. Es bastante fácil, hay mucha documentación en la red. Si ya habéis instalado Home Assistant en casa, podeis instalar Node-Red directamente desde el Supervisor de HA. Si queréis instalar Home Assistant en una Raspberry Pi, [tengo un video explicando como hacerlo aquí](https://youtu.be/ZFrOirWBZqk).
+## Cómo funcionan los flujos de Node-Red
 
-1. Pon la IP de tu inversor en el nodo de configuración de conexión Modbus de los nodos *Ingeteam IRs* y *Gavazzi IRs* (haz doble click sobre estos nodos, y luego pulsa el icono del lapiz donde pone "Server")
-2. Configura las salidas que desees: puedes utilizar el nodo de debug para recuperar los datos, introducir nuevos nodos de MQTT e incluso utilizar los ejemplos que he dejado de InfluxDB (tanto la versión 1 como la versión 2)
+Mi instalación solar cuenta con los siguientes componentes relevantes para este repositorio, a saber :
+* Inversor INGETEAM INGECON SUN STORAGE 1PLAY TL-M 6 kW, con la última versión del firmware disponible hasta la fecha (ABH1007_N)
+* Batería de litio Pylontech Force L2 10.45 kWh nominales, conectada al inversor mediante CANBUS
+* Vatímetro externo Carlo Gavazzi ET112, conectado al inversor mediante MODBUS
 
-Si quereis recuperar los mapas de memoria de MODBUS actualizados desde el inversor, deberéis configurar la ip del inversor en el nodo *inverter map*, así como activar el ``Use authentication`` y rellenar los campos de ``Username`` y ``Password`` con el usuario de la aplicación web de vuestro inversor (¡no la app web de ingeconsun!). Os recomiendo crear un usuario específico para node-red en el inversor, que solo tenga permisos básicos. Lo podéis hacer desde la web del inversor (si entrais como instalador, no se si avanzado también vale) en ``Comms->Users``
+El inversor publica, en el puerto TCP/502, todos los valores MODBUS del inversor, tal cual están descritos en la documentación del fabricante :
+
+http://www.ingeras.es/manual/ABH2010IMB08.pdf
