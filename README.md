@@ -7,6 +7,9 @@ Este repositorio y los flujos que en él se encuentran no son sino una actualiza
 
 https://github.com/mainakae/ingeteam
 
+_Por interés histórico y en reconocimiento al autor se han dejado en este repositorio los dos archivos .json creados por él (original-*.json). El archivo que usar, no obstante, sería el de nombre "ingecon-vatimetro-modbus-influxdb.json"._
+
+
 ## Cómo funcionan los flujos de Node-Red
 
 Mi instalación solar cuenta con los siguientes componentes relevantes para este repositorio, a saber :
