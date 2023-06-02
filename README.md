@@ -61,4 +61,15 @@ Copia el contenido del .json en una sola línea, ve al menú superior derecho de
 * Para el vatímetro existen flujos adicionales configurados para ejecutar cada 24 horas porque realmente sólo me fueron útiles a efectos de "troubleshooting"
 * Generar sensores en Home Assistant desde Node-Red se puede hacer de varias otras maneras diferentes, pero a mi usando la API me funcionó y me resultó simple y correcta para mis propópsitos
 
+## Nota sobre las versiones de firmware del INGECON SunStorage 1Play TL-M
+Alunas nuevas versiones del firmware para el inversor, que la propia interfaz web sugiere actualizar cuando están disponibles, pueden introducir cambios o añadir funcionalidad en los "input registers" publicados por MODBUS.
+
+Por ejemplo, entre las versione _G y _H del firmware, se documentan los siguientes cambios :
+
+ - *EV Charger. Active Power [30081] added*
+ - *RMS Differential Current [30062] changed to mA x10*
+![enter image description here](https://github.com/dardhal/ingeteam-nodered-ha-monitoring/blob/main/changelog-G_H.png?raw=true)
+El segundo de ellos supone que los valores previos del parámetro hay que convertirlos en el objeto "buffer-parse" de Node-Red, para que el resultado final sea correcto (de lo contrario un valor real de 12 mA aparecerá como 120 mA) :
+![enter image description here](https://github.com/dardhal/ingeteam-nodered-ha-monitoring/blob/main/differential-current-parse-buffer-H.png?raw=true)
+En mis pruebas , el nuevo parámetro "EV Charger. Active Power" no se publica, aún con la versión _H insalada.
 
