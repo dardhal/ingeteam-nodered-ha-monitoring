@@ -73,3 +73,19 @@ El segundo de ellos supone que los valores previos del parámetro hay que conver
 ![enter image description here](https://github.com/dardhal/ingeteam-nodered-ha-monitoring/blob/main/differential-current-parse-buffer-H.png?raw=true)
 En mis pruebas , el nuevo parámetro "EV Charger. Active Power" no se publica, aún con la versión _H insalada.
 
+
+## Problemas insertando valores en InfluxDB tras actualización del inversor a firmware versión ABH1007_W
+
+A principios de 2025 INGECON publica la versión indicada del firmware, sin que conste cambio alguno en el listado publicado de "input registers", que de hecho, data en la versión enlazada en su web del año 2023 :
+[Información técnica de INGECON SUN STORAGE 1Play TL M](https://www.ingeconsuntraining.info/?page_id=25442)
+[Input registers](https://www.ingeras.es/manual/ABH2010IMB08.pdf)
+
+Sin embargo tras actualizar el inversor se comienza a obtener errores (HTTP/400 Bad Request) al intentar insertar los valores obtenidos por MODBUS desde el inversor.
+
+La investigación muestra que el problema deriva del valor obtenido para el parámetro "battery_discharge_power_reduction_reason", que devuelve un valor numérico 13. Según la documentación del fabricante indicada arriba, este parámetro (30078 : Battery. Charge Limitation Reason) está descrito en la nota 9, que da una lista de los valores posibles de este parámetro, entre los cuales no está el valor numérico 13 :
+![enter image description here](https://github.com/dardhal/ingeteam-nodered-ha-monitoring/blob/main/Input-Registers-Table-9.png?raw=true)
+
+En el flujo de Node-Red, la función de "Value Mapping", no encuentra ningún índice de valor 13 para el parámetro en cuestión, deja la clave "battery_discharge_power_reduction_reason_str" como "undefined", y a la hora de insertar en InfluxDB falla la inserción con el error "invalid boolean".
+
+La solución de emergencia consiste en definir un valor adicional con clave 13 para el "battery_discharge_power_reduction_reason" de la tabla con un valor textual cualquiera.
+
