@@ -89,3 +89,10 @@ En el flujo de Node-Red, la función de "Value Mapping", no encuentra ningún í
 
 La solución de emergencia consiste en definir un valor adicional con clave 13 para el "battery_discharge_power_reduction_reason" de la tabla con un valor textual cualquiera.
 
+### Actualización a 24 de abril de 2025
+A resultas del correo enviado al fabricante (INGECON), al cabo de unos días publicaron la versión actualizada del documento de "Input Registries", donde consta la descripción del parámetro que causó problemas, así como otro añadido , que también se ha incorporado al flujo de Node-Red :
+
+[Documento actualizado de input registries del INGECON SunStorage 1PLay TL-M](https://www.ingeras.es/manual/ABH2010IMB08.pdf)
+
+![image](https://github.com/user-attachments/assets/bc266ab7-544d-4526-b5a8-4817d7a32885)
+
