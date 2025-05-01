@@ -34,7 +34,7 @@
             "7f0df5774fbfdad0"
         ],
         "x": 54,
-        "y": 919,
+        "y": 959,
         "w": 1092,
         "h": 482
     },
@@ -62,7 +62,7 @@
         "useIOForPayload": false,
         "emptyMsgOnFail": true,
         "x": 200,
-        "y": 1240,
+        "y": 1280,
         "wires": [
             [
                 "fce96d879381cd11"
@@ -85,7 +85,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 970,
-        "y": 1240,
+        "y": 1280,
         "wires": []
     },
     {
@@ -112,7 +112,7 @@
         "useIOForPayload": false,
         "emptyMsgOnFail": true,
         "x": 210,
-        "y": 1020,
+        "y": 1060,
         "wires": [
             [
                 "467d1059.340288"
@@ -264,7 +264,7 @@
         "setTopic": true,
         "outputs": 1,
         "x": 470,
-        "y": 1020,
+        "y": 1060,
         "wires": [
             [
                 "b7a25998.d154d8"
@@ -286,7 +286,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 970,
-        "y": 1060,
+        "y": 1100,
         "wires": []
     },
     {
@@ -305,7 +305,7 @@
         "org": "organisation",
         "bucket": "bucket",
         "x": 1020,
-        "y": 1020,
+        "y": 1060,
         "wires": []
     },
     {
@@ -329,7 +329,7 @@
         "to": "",
         "reg": false,
         "x": 740,
-        "y": 1020,
+        "y": 1060,
         "wires": [
             [
                 "3a54eeed.5b39a2",
@@ -362,7 +362,7 @@
         "useIOForPayload": false,
         "emptyMsgOnFail": true,
         "x": 210,
-        "y": 1360,
+        "y": 1400,
         "wires": [
             [
                 "2385cab300922432"
@@ -415,7 +415,7 @@
         "setTopic": true,
         "outputs": 1,
         "x": 470,
-        "y": 1360,
+        "y": 1400,
         "wires": [
             [
                 "d241190e63474092"
@@ -437,7 +437,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 970,
-        "y": 1360,
+        "y": 1400,
         "wires": []
     },
     {
@@ -464,7 +464,7 @@
         "useIOForPayload": false,
         "emptyMsgOnFail": true,
         "x": 220,
-        "y": 1120,
+        "y": 1160,
         "wires": [
             [
                 "adea1dc0e5eeee4e"
@@ -517,7 +517,7 @@
         "setTopic": true,
         "outputs": 1,
         "x": 470,
-        "y": 1120,
+        "y": 1160,
         "wires": [
             [
                 "f0a47d7834368a5a"
@@ -539,7 +539,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 970,
-        "y": 1120,
+        "y": 1160,
         "wires": []
     },
     {
@@ -566,7 +566,7 @@
         "useIOForPayload": false,
         "emptyMsgOnFail": true,
         "x": 190,
-        "y": 1300,
+        "y": 1340,
         "wires": [
             [
                 "045ca48d90942938"
@@ -619,7 +619,7 @@
         "setTopic": true,
         "outputs": 1,
         "x": 470,
-        "y": 1300,
+        "y": 1340,
         "wires": [
             [
                 "dd089dd5895caa53"
@@ -641,7 +641,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 970,
-        "y": 1300,
+        "y": 1340,
         "wires": []
     },
     {
@@ -668,7 +668,7 @@
         "useIOForPayload": false,
         "emptyMsgOnFail": true,
         "x": 210,
-        "y": 1180,
+        "y": 1220,
         "wires": [
             [
                 "7680881d8568db02"
@@ -712,7 +712,7 @@
         "setTopic": true,
         "outputs": 1,
         "x": 470,
-        "y": 1180,
+        "y": 1220,
         "wires": [
             [
                 "7f0df5774fbfdad0"
@@ -734,7 +734,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 970,
-        "y": 1180,
+        "y": 1220,
         "wires": []
     },
     {
@@ -745,7 +745,7 @@
         "name": "Flow Description (see node Properties)",
         "info": "Carlo Gavazzi ET112 (Item Number : ET112-DIN AV0 1 x S1 X)\nEM100 Series and ET100 Series MODBUS COMMUNICATION PROTOCOL\nhttps://gavazzi.se/app/uploads/2020/11/em111_em112_et112_cp.pdf\n\nMODBUS data obtained from INGECON inverter through TCP/503 port.\n\nFirmware version / revision code : B.4 (hence values at addresses 301025 and above are not available)\n\nSeveral different flows created :\n\n* Main one is for getting all the available metrics through MODBUS (TCP/503 using inverter as the host\n\n* Rest are either for secondary information (such as model or firmware) or even additional (useless) information\n\n* ET112 MODBUS manual states additional values for precise (to Watt precison) of totals only available in firmware B.10 or later, this unit has B.4, and hence not there\n\nPower DMD seems to be a measurment of the power demanded in a given period. By default it is a moving 1-minute average. Hence DMD peak is the minute with the highest average power consumption\n\n",
         "x": 230,
-        "y": 960,
+        "y": 1000,
         "wires": []
     },
     {
@@ -793,7 +793,7 @@
         "setTopic": true,
         "outputs": 1,
         "x": 470,
-        "y": 1240,
+        "y": 1280,
         "wires": [
             [
                 "6b4cc19627288c91"
@@ -813,7 +813,7 @@
         "finalize": "",
         "libs": [],
         "x": 740,
-        "y": 1120,
+        "y": 1160,
         "wires": [
             [
                 "2507abb7d8654887"
@@ -833,7 +833,7 @@
         "finalize": "",
         "libs": [],
         "x": 740,
-        "y": 1180,
+        "y": 1220,
         "wires": [
             [
                 "45a8e73d0d69e611"
@@ -882,7 +882,7 @@
         "rejectUnauthorized": true
     },
     {
-        "id": "4b19265ba897223c",
+        "id": "bc5683ca8569683a",
         "type": "group",
         "z": "4aa3e13d.f801b",
         "name": "INVERTER MODBUS INFORMATION TO INFLUXDB",
@@ -891,6 +891,7 @@
             "color": "#ff0000"
         },
         "nodes": [
+            "72f044782fb3e4ce",
             "50c9ae353821ca71",
             "3dff1fedcb75be8c",
             "629f042f24b64e5e",
@@ -910,15 +911,44 @@
             "532645aee591b2f2"
         ],
         "x": 54,
-        "y": 59,
+        "y": 79,
         "w": 1252,
         "h": 802
+    },
+    {
+        "id": "72f044782fb3e4ce",
+        "type": "ha-api",
+        "z": "4aa3e13d.f801b",
+        "g": "bc5683ca8569683a",
+        "name": "Publish Inverter Grid Frequency",
+        "server": "a359a964.7592e8",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "http",
+        "method": "post",
+        "path": "/api/states/sensor.inverter_ac_frequency",
+        "data": "{\"state\":\"{{payload.internal_wattmeter_grid_frequency}}\",\"attributes\":{\"unit_of_measurement\":\"Hz\",\"state_class\":\"measurement\",\"device_class\":\"frequency\",\"icon\":\"mdi:sine-wave\",\"friendly_name\":\"Inverter Grid Frequency\"}}",
+        "dataType": "json",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 1150,
+        "y": 840,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "50c9ae353821ca71",
         "type": "ha-api",
         "z": "4aa3e13d.f801b",
-        "g": "4b19265ba897223c",
+        "g": "bc5683ca8569683a",
         "name": "Publish Inverter Status",
         "server": "a359a964.7592e8",
         "version": 1,
@@ -938,7 +968,7 @@
             }
         ],
         "x": 1120,
-        "y": 760,
+        "y": 720,
         "wires": [
             []
         ]
@@ -947,7 +977,7 @@
         "id": "3dff1fedcb75be8c",
         "type": "ha-api",
         "z": "4aa3e13d.f801b",
-        "g": "4b19265ba897223c",
+        "g": "bc5683ca8569683a",
         "name": "Publish Used Power",
         "server": "a359a964.7592e8",
         "version": 1,
@@ -967,7 +997,7 @@
             }
         ],
         "x": 1120,
-        "y": 640,
+        "y": 600,
         "wires": [
             []
         ]
@@ -976,7 +1006,7 @@
         "id": "629f042f24b64e5e",
         "type": "ha-api",
         "z": "4aa3e13d.f801b",
-        "g": "4b19265ba897223c",
+        "g": "bc5683ca8569683a",
         "name": "Publish Self-Consumed Power",
         "server": "a359a964.7592e8",
         "version": 1,
@@ -996,7 +1026,7 @@
             }
         ],
         "x": 1150,
-        "y": 700,
+        "y": 660,
         "wires": [
             []
         ]
@@ -1005,7 +1035,7 @@
         "id": "4c9f8282df901cbd",
         "type": "ha-api",
         "z": "4aa3e13d.f801b",
-        "g": "4b19265ba897223c",
+        "g": "bc5683ca8569683a",
         "name": "Publish PV 1 Power",
         "server": "a359a964.7592e8",
         "version": 1,
@@ -1025,7 +1055,7 @@
             }
         ],
         "x": 1120,
-        "y": 520,
+        "y": 480,
         "wires": [
             []
         ]
@@ -1034,7 +1064,7 @@
         "id": "b6fbb960a79222e1",
         "type": "ha-api",
         "z": "4aa3e13d.f801b",
-        "g": "4b19265ba897223c",
+        "g": "bc5683ca8569683a",
         "name": "Publish Battery Power",
         "server": "a359a964.7592e8",
         "version": 1,
@@ -1054,7 +1084,7 @@
             }
         ],
         "x": 1120,
-        "y": 580,
+        "y": 540,
         "wires": [
             []
         ]
@@ -1063,7 +1093,7 @@
         "id": "5298883b.63d67",
         "type": "modbus-read",
         "z": "4aa3e13d.f801b",
-        "g": "4b19265ba897223c",
+        "g": "bc5683ca8569683a",
         "name": "Inverter Input Registers",
         "topic": "",
         "showStatusActivities": false,
@@ -1084,7 +1114,7 @@
         "useIOForPayload": false,
         "emptyMsgOnFail": true,
         "x": 200,
-        "y": 400,
+        "y": 440,
         "wires": [
             [
                 "4e8faafc.742a84"
@@ -1096,7 +1126,7 @@
         "id": "4e8faafc.742a84",
         "type": "buffer-parser",
         "z": "4aa3e13d.f801b",
-        "g": "4b19265ba897223c",
+        "g": "bc5683ca8569683a",
         "name": "Parse Buffer",
         "data": "responseBuffer.buffer",
         "dataType": "msg",
@@ -1767,7 +1797,7 @@
         "setTopic": true,
         "outputs": 1,
         "x": 410,
-        "y": 400,
+        "y": 440,
         "wires": [
             [
                 "307db9a5.2db70e"
@@ -1778,9 +1808,9 @@
         "id": "307db9a5.2db70e",
         "type": "function",
         "z": "4aa3e13d.f801b",
-        "g": "4b19265ba897223c",
+        "g": "bc5683ca8569683a",
         "name": "Value Mapping",
-        "func": "let payload=msg.payload;\n\nlet conversions = { \"web_interface_bits\": { \"convert\": \"bitwise\", \"positions\": [{ \"val\": 0, \"desc\": \"Green Led Blinking\" }, { \"val\": 1, \"desc\": \"Green Led On\" }, { \"val\": 5, \"desc\": \"Red Led On\" }, { \"val\": 8, \"desc\": \"Fan Test Running\" }, { \"val\": 9, \"desc\": \"Fan Test Ended\" }, { \"val\": 10, \"desc\": \"Grid/Genset Icon Active\" }, { \"val\": 11, \"desc\": \"Battery Icon Active\" }, { \"val\": 12, \"desc\": \"Inverter Icon Active\" }, { \"val\": 13, \"desc\": \"Autotest menu Enabled\" }, { \"val\": 14, \"desc\": \"Critical Loads configured\" }] }, \"stop_event\": { \"values\": [{ \"val\": 0, \"desc\": \"0\" }, { \"val\": 1, \"desc\": \"1 - Low Battery SOC or Voltage\" }, { \"val\": 2, \"desc\": \"2 - High Battery Voltage\" }, { \"val\": 3, \"desc\": \"3 - Communication Error with BMS\" }, { \"val\": 4, \"desc\": \"4 - Inverter stopped from Digital Input\" }, { \"val\": 5, \"desc\": \"5 - Grid Voltage or Frequency out of range\" }, { \"val\": 6, \"desc\": \"6 - DC Bus or PV input Overvoltage\" }, { \"val\": 7, \"desc\": \"7 - DC/AC Fault\" }, { \"val\": 8, \"desc\": \"8 - DC/DC Fault\" }, { \"val\": 9, \"desc\": \"9 - HW Battery Overcurrent\" }, { \"val\": 10, \"desc\": \"10 - Inverter stopped manually\" }, { \"val\": 11, \"desc\": \"11 - Overdischarge in Battery\" }, { \"val\": 12, \"desc\": \"12 - Overload in Critical Loads\" }, { \"val\": 13, \"desc\": \"13 - Short circuit in Critical Loads\" }, { \"val\": 14, \"desc\": \"14 - Low PV Power\" }, { \"val\": 15, \"desc\": \"15 - AC Relays Test\" }, { \"val\": 16, \"desc\": \"16 - Low Inverter Temperature\" }, { \"val\": 17, \"desc\": \"17 - High Inverter Temperature\" }, { \"val\": 18, \"desc\": \"18 - Incremental differential current\" }, { \"val\": 19, \"desc\": \"19 - RMS Differential current\" }, { \"val\": 20, \"desc\": \"20 - Instantaneous differential current\" }, { \"val\": 21, \"desc\": \"21 - Insulation Failure\" }, { \"val\": 22, \"desc\": \"22 - High PV current\" }, { \"val\": 23, \"desc\": \"23 - DC/DC or AC/DC Error\" }, { \"val\": 24, \"desc\": \"24 - ADC Error\" }, { \"val\": 25, \"desc\": \"25 - Configuration change\" }, { \"val\": 26, \"desc\": \"26 - Reserved\" }, { \"val\": 27, \"desc\": \"27 - Wrong type of battery\" }, { \"val\": 28, \"desc\": \"28 - ADC Error\" }, { \"val\": 29, \"desc\": \"29 - Reset Watchdog\" }, { \"val\": 30, \"desc\": \"30 - Alarm in BMS\" }] }, \"alarms\": { \"convert\": \"bitwise\", \"positions\": [{ \"val\": 0, \"desc\": \"Battery voltage out of range\" }, { \"val\": 1, \"desc\": \"Grid frequency out of range\" }, { \"val\": 2, \"desc\": \"Grid voltage out of range\" }, { \"val\": 3, \"desc\": \"DC/AC Inverter overcurrent or fault\" }, { \"val\": 4, \"desc\": \"DC/DC Battery overcurrent or fault\" }, { \"val\": 5, \"desc\": \"Insulation failure\" }, { \"val\": 6, \"desc\": \"Wrong wired in the installation\" }, { \"val\": 7, \"desc\": \"Inverter temperature out of range\" }, { \"val\": 8, \"desc\": \"DC Bus overvoltage\" }, { \"val\": 9, \"desc\": \"Configuration change\" }, { \"val\": 10, \"desc\": \"Inverter stopped\" }, { \"val\": 11, \"desc\": \"Hardware failure\" }, { \"val\": 12, \"desc\": \"DC/DC or AC/DC Converter Error\" }, { \"val\": 13, \"desc\": \"Transient Grid Frequency (AC Breaker tripped)\" }, { \"val\": 14, \"desc\": \"Battery Temperature out of range\" }, { \"val\": 15, \"desc\": \"Overload capacity exceeded in Battery\" }, { \"val\": 16, \"desc\": \"Overload capacity exceeded in Critical Loads\" }, { \"val\": 17, \"desc\": \"Short circuit in Critical Loads\" }, { \"val\": 18, \"desc\": \"PT100 sensor failure\" }, { \"val\": 19, \"desc\": \"Communication Error with BMS\" }, { \"val\": 20, \"desc\": \"Wrong inverter serial number\" }, { \"val\": 21, \"desc\": \"Transient Grid Voltage (AC Breaker tripped)\" }, { \"val\": 22, \"desc\": \"Wrong type of battery configuration\" }, { \"val\": 23, \"desc\": \"Alarm in the BMS\" }, { \"val\": 24, \"desc\": \"Overcurrent in PV 1 array input\" }, { \"val\": 25, \"desc\": \"Overcurren
+        "func": "let payload=msg.payload;\n\nlet conversions = { \"web_interface_bits\": { \"convert\": \"bitwise\", \"positions\": [{ \"val\": 0, \"desc\": \"Green Led Blinking\" }, { \"val\": 1, \"desc\": \"Green Led On\" }, { \"val\": 5, \"desc\": \"Red Led On\" }, { \"val\": 8, \"desc\": \"Fan Test Running\" }, { \"val\": 9, \"desc\": \"Fan Test Ended\" }, { \"val\": 10, \"desc\": \"Grid/Genset Icon Active\" }, { \"val\": 11, \"desc\": \"Battery Icon Active\" }, { \"val\": 12, \"desc\": \"Inverter Icon Active\" }, { \"val\": 13, \"desc\": \"Autotest menu Enabled\" }, { \"val\": 14, \"desc\": \"Critical Loads configured\" }] }, \"stop_event\": { \"values\": [{ \"val\": 0, \"desc\": \"0\" }, { \"val\": 1, \"desc\": \"1 - Low Battery SOC or Voltage\" }, { \"val\": 2, \"desc\": \"2 - High Battery Voltage\" }, { \"val\": 3, \"desc\": \"3 - Communication Error with BMS\" }, { \"val\": 4, \"desc\": \"4 - Inverter stopped from Digital Input\" }, { \"val\": 5, \"desc\": \"5 - Grid Voltage or Frequency out of range\" }, { \"val\": 6, \"desc\": \"6 - DC Bus or PV input Overvoltage\" }, { \"val\": 7, \"desc\": \"7 - DC/AC Fault\" }, { \"val\": 8, \"desc\": \"8 - DC/DC Fault\" }, { \"val\": 9, \"desc\": \"9 - HW Battery Overcurrent\" }, { \"val\": 10, \"desc\": \"10 - Inverter stopped manually\" }, { \"val\": 11, \"desc\": \"11 - Overdischarge in Battery\" }, { \"val\": 12, \"desc\": \"12 - Overload in Critical Loads\" }, { \"val\": 13, \"desc\": \"13 - Short circuit in Critical Loads\" }, { \"val\": 14, \"desc\": \"14 - Low PV Power\" }, { \"val\": 15, \"desc\": \"15 - AC Relays Test\" }, { \"val\": 16, \"desc\": \"16 - Low Inverter Temperature\" }, { \"val\": 17, \"desc\": \"17 - High Inverter Temperature\" }, { \"val\": 18, \"desc\": \"18 - Incremental differential current\" }, { \"val\": 19, \"desc\": \"19 - RMS Differential current\" }, { \"val\": 20, \"desc\": \"20 - Instantaneous differential current\" }, { \"val\": 21, \"desc\": \"21 - Insulation Failure\" }, { \"val\": 22, \"desc\": \"22 - High PV current\" }, { \"val\": 23, \"desc\": \"23 - DC/DC or AC/DC Error\" }, { \"val\": 24, \"desc\": \"24 - ADC Error\" }, { \"val\": 25, \"desc\": \"25 - Configuration change\" }, { \"val\": 26, \"desc\": \"26 - Reserved\" }, { \"val\": 27, \"desc\": \"27 - Wrong type of battery\" }, { \"val\": 28, \"desc\": \"28 - ADC Error\" }, { \"val\": 29, \"desc\": \"29 - Reset Watchdog\" }, { \"val\": 30, \"desc\": \"30 - Alarm in BMS\" }] }, \"alarms\": { \"convert\": \"bitwise\", \"positions\": [{ \"val\": 0, \"desc\": \"Battery voltage out of range\" }, { \"val\": 1, \"desc\": \"Grid frequency out of range\" }, { \"val\": 2, \"desc\": \"Grid voltage out of range\" }, { \"val\": 3, \"desc\": \"DC/AC Inverter overcurrent or fault\" }, { \"val\": 4, \"desc\": \"DC/DC Battery overcurrent or fault\" }, { \"val\": 5, \"desc\": \"Insulation failure\" }, { \"val\": 6, \"desc\": \"Wrong wired in the installation\" }, { \"val\": 7, \"desc\": \"Inverter temperature out of range\" }, { \"val\": 8, \"desc\": \"DC Bus overvoltage\" }, { \"val\": 9, \"desc\": \"Configuration change\" }, { \"val\": 10, \"desc\": \"Inverter stopped\" }, { \"val\": 11, \"desc\": \"Hardware failure\" }, { \"val\": 12, \"desc\": \"DC/DC or AC/DC Converter Error\" }, { \"val\": 13, \"desc\": \"Transient Grid Frequency (AC Breaker tripped)\" }, { \"val\": 14, \"desc\": \"Battery Temperature out of range\" }, { \"val\": 15, \"desc\": \"Overload capacity exceeded in Battery\" }, { \"val\": 16, \"desc\": \"Overload capacity exceeded in Critical Loads\" }, { \"val\": 17, \"desc\": \"Short circuit in Critical Loads\" }, { \"val\": 18, \"desc\": \"PT100 sensor failure\" }, { \"val\": 19, \"desc\": \"Communication Error with BMS\" }, { \"val\": 20, \"desc\": \"Wrong inverter serial number\" }, { \"val\": 21, \"desc\": \"Transient Grid Voltage (AC Breaker tripped)\" }, { \"val\": 22, \"desc\": \"Wrong type of battery configuration\" }, { \"val\": 23, \"desc\": \"Alarm in the BMS\" }, { \"val\": 24, \"desc\": \"Overcurrent in PV 1 array input\" }, { \"val\": 25, \"desc\": \"Overcurrent in PV 2 array input\" }, { \"val\": 26, \"desc\": \"Full Battery Discharge\" }] }, \"code1\": { \"convert\": \"bitwise\", \"positions\": [{ \"val\": 1, \"desc\": \"Grid Current Sensor out of full scale range\" }, { \"val\": 2, \"desc\": \"Insulation Failure in PV or Battery terminals\" }, { \"val\": 3, \"desc\": \"Warning: Internal fan blocked\" }, { \"val\": 4, \"desc\": \"Warning: External fan blocked\" }, { \"val\": 5, \"desc\": \"Battery Current Sensor out of full scale range\" }, { \"val\": 6, \"desc\": \"Compensation of DC offset failed\" }, { \"val\": 7, \"desc\": \"Grid Voltage Sensor out of full scale range\" }, { \"val\": 8, \"desc\": \"Avg. Differential Current out of full scale range\" }, { \"val\": 9, \"desc\": \"Inst. Differential Current out of full scale range\" }, { \"val\": 10, \"desc\": \"RMS Differential Current failure\" }, { \"val\": 11, \"desc\": \"Incremental differential current failure\" }, { \"val\": 12, \"desc\": \"Instantaneous differential current failure\" }, { \"val\": 13, \"desc\": \"Inverter stopped manually\" }] }, \"code2\": { \"convert\": \"bitwise\", \"positions\": [{ \"val\": 0, \"desc\": \"Warning: High Temperature\" }, { \"val\": 1, \"desc\": \"AC Voltage in Critical Loads Output\" }, { \"val\": 2, \"desc\": \"Low PV power to start up the inverter\" }, { \"val\": 3, \"desc\": \"Grid Frequency out of the configured limits\" }, { \"val\": 4, \"desc\": \"Warning: Compensation of DC offset\" }, { \"val\": 5, \"desc\": \"Internal AC relay test failed\" }, { \"val\": 6, \"desc\": \"Grid Voltage out of the configured limits\" }, { \"val\": 7, \"desc\": \"Low Battery Voltage\" }, { \"val\": 8, \"desc\": \"High Battery Voltage\" }, { \"val\": 9, \"desc\": \"Communication Error with BMS\" }, { \"val\": 10, \"desc\": \"Maximum Critical Loads Power in Off-Grid\" }, { \"val\": 11, \"desc\": \"Low Critical Loads Voltage in Off-Grid\" }, { \"val\": 12, \"desc\": \"Maximum Critical Loads Power in On-Grid\" }, { \"val\": 13, \"desc\": \"Alarm in the BMS\" }, { \"val\": 14, \"desc\": \"Internal Differential Current test failed\" }, { \"val\": 15, \"desc\": \"Inverter stopped by the Digital Input\" }] }, \"code3\": { \"convert\": \"bitwise\", \"positions\": [{ \"val\": 0, \"desc\": \"PT100 disconnected or shortcircuited\" }, { \"val\": 1, \"desc\": \"High Battery Temperature\" }, { \"val\": 2, \"desc\": \"Warning: DC/DC Battery cannot operate\" }, { \"val\": 3, \"desc\": \"Warning: Synchronization with the grid not successful\" }, { \"val\": 4, \"desc\": \"Warning: Transient failure detection in the Grid (12ms)\" }, { \"val\": 5, \"desc\": \"Warning: DC/DC PV input 1 cannot operate\" }, { \"val\": 6, \"desc\": \"Battery SOC lower than configured SOC Descx\" }, { \"val\": 7, \"desc\": \"Warning: DC/DC PV input 2 cannot operate\" }, { \"val\": 8, \"desc\": \"Warning: Date not synchronized\" }, { \"val\": 9, \"desc\": \"Warning: RTC CR2032 battery exhausted\" }, { \"val\": 10, \"desc\": \"Warning: Injection of power to the generator\" }, { \"val\": 11, \"desc\": \"Warning: Generator Voltage out of range\" }, { \"val\": 12, \"desc\": \"Warning: Generator Frequency out of range\" }, { \"val\": 13, \"desc\": \"Warning: Transient Grid Voltage (AC Breaker tripped)\" }, { \"val\": 14, \"desc\": \"Warning: Transient Grid Frequency (AC Breaker tripped)\" }] }, \"inverter_status\": { \"values\": [{ \"val\": 0, \"desc\": \"Stopped\" }, { \"val\": 1, \"desc\": \"Starting\" }, { \"val\": 2, \"desc\": \"Off-Grid\" }, { \"val\": 3, \"desc\": \"On-Grid\" }, { \"val\": 4, \"desc\": \"On-Grid (Standby-Battery)\" }, { \"val\": 5, \"desc\": \"Waiting to connect to Grid\" }, { \"val\": 6, \"desc\": \"Critical Loads Bypassed to Grid\" }, { \"val\": 7, \"desc\": \"Emergency Charge from PV\" }, { \"val\": 8, \"desc\": \"Emergency Charge from Grid\" }, { \"val\": 9, \"desc\": \"Inverter Locked Waiting for Reset\" }, { \"val\": 10, \"desc\": \"Error Mode\" }, { \"val\": 11, \"desc\": \"Off-Grid in AC Grid\" }] }, \"battery_status\": { \"values\": [{ \"val\": 0, \"desc\": \"Standby\" }, { \"val\": 1, \"desc\": \"Discharging\" }, { \"val\": 2, \"desc\": \"Constant Current Charging\" }, { \"val\": 3, \"desc\": \"Constant Voltage Charging\" }, { \"val\": 4, \"desc\": \"Floating\" }, { \"val\": 5, \"desc\": \"Equalizing\" }, { \"val\": 6, \"desc\": \"Error Communication with BMS\" }, { \"val\": 7, \"desc\": \"No Configured\" }, { \"val\": 8, \"desc\": \"Capacity Calibration - Charging (Step 1)\" }, { \"val\": 9, \"desc\": \"Calibration - Discharging (Step 2)\" }] }, \"battery_bms_alarms\": { \"convert\": \"bitwise\", \"positions\": [{ \"val\": 0, \"desc\": \"High Current during Charge\" }, { \"val\": 1, \"desc\": \"High Voltage\" }, { \"val\": 2, \"desc\": \"Low Voltage\" }, { \"val\": 3, \"desc\": \"High Temperature\" }, { \"val\": 4, \"desc\": \"Low Temperature\" }, { \"val\": 5, \"desc\": \"Internal BMS Alarm\" }, { \"val\": 6, \"desc\": \"Cell Imbalance\" }, { \"val\": 7, \"desc\": \"High Current during Discharge\" }, { \"val\": 8, \"desc\": \"System BMS Error\" }] }, \"battery_discharge_power_reduction_reason\": { \"values\": [{ \"val\": 0, \"desc\": \"No Limitation\" }, { \"val\": 1, \"desc\": \"Heat Sink Temperature\" }, { \"val\": 2, \"desc\": \"PT100 Temperature\" }, { \"val\": 3, \"desc\": \"Low Bus Voltage Protection\" }, { \"val\": 4, \"desc\": \"Lead-acid Settings\" }, { \"val\": 5, \"desc\": \"BMS Communication\" }, { \"val\": 6, \"desc\": \"SOC Max Configured\" }, { \"val\": 7, \"desc\": \"SOC Min Configured\" }, { \"val\": 8, \"desc\": \"Maximum Battery Power\" }, { \"val\": 9, \"desc\": \"Modbus Command\" }, { \"val\": 10, \"desc\": \"Digital Input 2\" }, { \"val\": 11, \"desc\": \"Digital Input 3\" }, { \"val\": 12, \"desc\": \"PV Charging Scheduling\" }, { \"val\": 13, \"desc\": \"EMS Strategy\" }] }, \"battery_charge_power_reduction_reason\": { \"values\": [{ \"val\": 0, \"desc\": \"No Limitation\" }, { \"val\": 1, \"desc\": \"Heat Sink Temperature\" }, { \"val\": 2, \"desc\": \"PT100 Temperature\" }, { \"val\": 3, \"desc\": \"Low Bus Voltage Protection\" }, { \"val\": 4, \"desc\": \"Lead-acid Settings\" }, { \"val\": 5, \"desc\": \"BMS Communication\" }, { \"val\": 6, \"desc\": \"SOC Max Configured\" }, { \"val\": 7, \"desc\": \"SOC Min Configured\" }, { \"val\": 8, \"desc\": \"Maximum Battery Power\" }, { \"val\": 9, \"desc\": \"Modbus Command\" }, { \"val\": 10, \"desc\": \"Digital Input 2\" }, { \"val\": 11, \"desc\": \"Digital Input 3\" }, { \"val\": 12, \"desc\": \"PV Charging Scheduling\" }] }, \"active_power_reduction_reason\": { \"values\": [{ \"val\": 0, \"desc\": \"No Limitation\" }, { \"val\": 1, \"desc\": \"Communication\" }, { \"val\": 2, \"desc\": \"PCB Temperature\" }, { \"val\": 3, \"desc\": \"Heat Sink Temperature\" }, { \"val\": 4, \"desc\": \"Pac vs Fac Algorithm\" }, { \"val\": 5, \"desc\": \"Soft Start\" }, { \"val\": 6, \"desc\": \"Charge Power Configured\" }, { \"val\": 7, \"desc\": \"PV Surplus injected to the Loads\" }, { \"val\": 8, \"desc\": \"Pac vs Vac Algorithm\" }, { \"val\": 9, \"desc\": \"Battery Power Limited\" }, { \"val\": 10, \"desc\": \"AC Grid Power Limited\" }, { \"val\": 11, \"desc\": \"Self Consumption Mode\" }, { \"val\": 12, \"desc\": \"High Bus Voltage Protection\" }, { \"val\": 13, \"desc\": \"LVRT or HVRT Process\" }, { \"val\": 14, \"desc\": \"Nominal AC Current\" }, { \"val\": 15, \"desc\": \"Grid Consumption Protection\" }, { \"val\": 16, \"desc\": \"PV Surplus Injected to the Grid\" }] }, \"reactive_power_setpoint_type\": { \"values\": [{ \"val\": 0, \"desc\": \"Cosφ Configuration\" }, { \"val\": 1, \"desc\": \"Qac Communication\" }, { \"val\": 2, \"desc\": \"Cosφ Communication\" }, { \"val\": 3, \"desc\": \"Qac vs Vac Algorithm\" }, { \"val\": 4, \"desc\": \"Cosφ vs Pac Algorithm\" }] }, \"digital_output1_status\": { \"values\": [{ \"val\": 0, \"desc\": \"OFF\" }, { \"val\": 1, \"desc\": \"ON\" }] }, \"digital_output2_status\": { \"values\": [{ \"val\": 0, \"desc\": \"OFF\" }, { \"val\": 1, \"desc\": \"ON\" }] }, \"digital_input_drm0_status\": { \"values\": [{ \"val\": 0, \"desc\": \"OFF\" }, { \"val\": 1, \"desc\": \"ON\" }] }, \"digital_input2_status\": { \"values\": [{ \"val\": 0, \"desc\": \"OFF\" }, { \"val\": 1, \"desc\": \"ON\" }] }, \"digital_input3_status\": { \"values\": [{ \"val\": 0, \"desc\": \"OFF\" }, { \"val\": 1, \"desc\": \"ON\" }] }, \"hardware_version\": { \"values\": [{ \"val\": 0, \"desc\": \"ABH0039\" }, { \"val\": 1, \"desc\": \"ABH0045\" }, { \"val\": 2, \"desc\": \"ABH0039 - ABH PT100\" }, { \"val\": 3, \"desc\": \"ABH0045 - ABH PT100\" }] }, \"battery_bms_flags\": { \"convert\": \"bitwise\", \"positions\": [{ \"val\": 0, \"desc\": \"Stop Charge\" }, { \"val\": 1, \"desc\": \"Stop Discharge\" }, { \"val\": 2, \"desc\": \"Forced Charge (BMS)\" }, { \"val\": 3, \"desc\": \"Calibration\" }, { \"val\": 4, \"desc\": \"Forced Charge (SOC)\" }] } };\n\nfunction bitwise(value, positions) {\n    let res = [];\n    for(const position of positions) if(value & 1 << position.val) res.push(position.desc);\n    return res.join(\", \");\n}\n\nfunction valuewise(value, values) {\n    for(const candidate of values) if(value == candidate.val) return candidate.desc;\n}\n\nfor(const conv in conversions) {\n    if(conversions[conv].convert == \"bitwise\") payload[conv+\"_str\"] = bitwise(payload[conv], conversions[conv].positions);\n    else payload[conv+\"_str\"] = valuewise(payload[conv], conversions[conv].values);\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -1788,7 +1818,7 @@
         "finalize": "",
         "libs": [],
         "x": 600,
-        "y": 400,
+        "y": 440,
         "wires": [
             [
                 "8ea81314.d0eca"
@@ -1799,7 +1829,7 @@
         "id": "26c1d00b.3d487",
         "type": "influxdb out",
         "z": "4aa3e13d.f801b",
-        "g": "4b19265ba897223c",
+        "g": "bc5683ca8569683a",
         "influxdb": "636cb567.cfe544",
         "name": "Write to InfluxDB 1.x",
         "measurement": "ingeteam",
@@ -1811,14 +1841,14 @@
         "org": "organisation",
         "bucket": "bucket",
         "x": 1120,
-        "y": 160,
+        "y": 120,
         "wires": []
     },
     {
         "id": "8ea81314.d0eca",
         "type": "change",
         "z": "4aa3e13d.f801b",
-        "g": "4b19265ba897223c",
+        "g": "bc5683ca8569683a",
         "name": "Compute Consumption",
         "rules": [
             {
@@ -1835,7 +1865,7 @@
         "to": "",
         "reg": false,
         "x": 820,
-        "y": 400,
+        "y": 440,
         "wires": [
             [
                 "26c1d00b.3d487",
@@ -1849,7 +1879,8 @@
                 "c8b265bbd06242e6",
                 "6aedf8b9b426698a",
                 "50c9ae353821ca71",
-                "532645aee591b2f2"
+                "532645aee591b2f2",
+                "72f044782fb3e4ce"
             ]
         ]
     },
@@ -1857,18 +1888,18 @@
         "id": "fa84c5ecb42f2be9",
         "type": "comment",
         "z": "4aa3e13d.f801b",
-        "g": "4b19265ba897223c",
+        "g": "bc5683ca8569683a",
         "name": "Flow Description (see node Properties)",
         "info": "Flow is adjusted for the INGETEAM SUN STORAGE 1PLAY 6 TL-M inverter with \"_W\" firmware version, as described in the official document below : \nINGECON SUN STORAGE 1PLAY TL M MODBUS INPUT REGISTERS\nhttps://www.ingeras.es/manual/ABH2010IMB08.pdf\n\n1. Use ModBus-Read node to query SUNSTORAGE through TCP/502 for all values (input registers), 74 values starting at address 6.\n\n2. User Buffer-Parse node to assign names to all input registers read, applying any necessary scaling as described in the document.\n\n3. Use the Function node to map particular key numerical values and bits in bit maps to textual values or booleans\n\n4. Use the Change node with some JSONata code to calculate instantaneous values (in Watts) for production, import, export, consumption and self-consumption.\n   Note these values as in Watts and valid only at the instant they were taken. Using these metrics for integrating consumption data (Wh) will be as reliable as the frequency of collecting data is.\n\n5. Use InfluxDB-Out node to write the whole list of key=value pairs to InfluxDB at a given database and measurement\n\n6. At the same point, use the HA HTTP REST API to publish several metrics as sensors to HA, as they will be handy in HA to make calculations and use Lovelace cards\n\n\nNOTE : INGECON makes changes and additions to the INPUT REGISTERS in some versions. For example, as of version _H, \"Differential Current\" was changed from mA to tenths of mA.\n       Hence after any firmware upgrade, it is necessary to check the changes in the document, to fix breaking changes, and to add new input registries when available.\n\nNOTE : again this occurred when input registries were updated to _I version, but no documentation was published up-front, which caused a transient processing error with Node-Red\n",
         "x": 230,
-        "y": 100,
+        "y": 120,
         "wires": []
     },
     {
         "id": "26cee9eca85ab8e6",
         "type": "ha-api",
         "z": "4aa3e13d.f801b",
-        "g": "4b19265ba897223c",
+        "g": "bc5683ca8569683a",
         "name": "Publish Battery SOC",
         "server": "a359a964.7592e8",
         "version": 1,
@@ -1888,7 +1919,7 @@
             }
         ],
         "x": 1120,
-        "y": 220,
+        "y": 180,
         "wires": [
             []
         ]
@@ -1897,7 +1928,7 @@
         "id": "175e6b91a2b82006",
         "type": "ha-api",
         "z": "4aa3e13d.f801b",
-        "g": "4b19265ba897223c",
+        "g": "bc5683ca8569683a",
         "name": "Publish Export Power",
         "server": "a359a964.7592e8",
         "version": 1,
@@ -1917,7 +1948,7 @@
             }
         ],
         "x": 1120,
-        "y": 400,
+        "y": 360,
         "wires": [
             []
         ]
@@ -1926,7 +1957,7 @@
         "id": "4870830798f453e7",
         "type": "ha-api",
         "z": "4aa3e13d.f801b",
-        "g": "4b19265ba897223c",
+        "g": "bc5683ca8569683a",
         "name": "Publish Import Power",
         "server": "a359a964.7592e8",
         "version": 1,
@@ -1946,7 +1977,7 @@
             }
         ],
         "x": 1120,
-        "y": 340,
+        "y": 300,
         "wires": [
             []
         ]
@@ -1955,7 +1986,7 @@
         "id": "c8b265bbd06242e6",
         "type": "ha-api",
         "z": "4aa3e13d.f801b",
-        "g": "4b19265ba897223c",
+        "g": "bc5683ca8569683a",
         "name": "Publish Battery Power",
         "server": "a359a964.7592e8",
         "version": 1,
@@ -1975,7 +2006,7 @@
             }
         ],
         "x": 1120,
-        "y": 280,
+        "y": 240,
         "wires": [
             []
         ]
@@ -1984,7 +2015,7 @@
         "id": "6aedf8b9b426698a",
         "type": "ha-api",
         "z": "4aa3e13d.f801b",
-        "g": "4b19265ba897223c",
+        "g": "bc5683ca8569683a",
         "name": "Publish Grid Net Power",
         "server": "a359a964.7592e8",
         "version": 1,
@@ -2004,7 +2035,7 @@
             }
         ],
         "x": 1130,
-        "y": 460,
+        "y": 420,
         "wires": [
             []
         ]
@@ -2013,7 +2044,7 @@
         "id": "532645aee591b2f2",
         "type": "ha-api",
         "z": "4aa3e13d.f801b",
-        "g": "4b19265ba897223c",
+        "g": "bc5683ca8569683a",
         "name": "Publish Inverter AC Voltage",
         "server": "a359a964.7592e8",
         "version": 1,
@@ -2033,7 +2064,7 @@
             }
         ],
         "x": 1140,
-        "y": 820,
+        "y": 780,
         "wires": [
             []
         ]

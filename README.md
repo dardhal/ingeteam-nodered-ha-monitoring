@@ -96,3 +96,16 @@ A resultas del correo enviado al fabricante (INGECON), al cabo de unos días pub
 
 ![image](https://github.com/user-attachments/assets/bc266ab7-544d-4526-b5a8-4817d7a32885)
 
+
+## "Blackout" total en España y Portugal (2025-04-28)
+Por motivos técnicos que aún se desconocen se produjo una caída de la red eléctrica a las 12:33 horas del día 28 de abril de 2025, afectando a la totalidad de España y Portugal.
+
+El suministro se fue recuperando desde las regiones limítrofes con redes eléctricas no afectadas por la caída en la Península Ibérica (Francia y Marruecos), de manera que en el centro del España el corte del suministro duró, en algunos casos, casi 12 horas.
+
+Se especula con los motivos de este problema masivo, pero según parece probado la consecuencia más inmediata fueron "excursiones" de voltaje y frecuencia de red tales que ciertas plantas de generación (principalmente FV) se desconectaron de golpe y en masa, provocando el colapso de la red.
+
+He actualizado el flujo de node red para publicar como sensor la frecuencia de red medida por el inversor, si bien los datos que se insertan en InfluxDB incluyen este parámetro junto con todos los demás que lee por MODBUS.
+
+Adicionalmente se muestra a continuación una captura de la frecuencia de red medida por el inversor en las horas previas a la caída total de la red (12:33 del 28 de abril) :
+![frecuencia-red-previa-colapso](https://github.com/user-attachments/assets/092e6bb4-f1f1-4249-9278-9d94d7976e2c)
+
